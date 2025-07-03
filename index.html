@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claim Your $100 Target Gift Card</title>
+  <style>
+    /* Import a clean, premium font */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      border: 2px solid #e02128;
+      border-radius: 12px;
+      max-width: 360px;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-height: 60px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #e02128;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .steps {
+      background-color: #fff5f6;
+      border: 1px solid #f2dede;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .steps h2 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #e02128;
+    }
+
+    .steps ol {
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .steps li {
+      counter-increment: step;
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 32px;
+      font-size: 0.95rem;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      background-color: #e02128;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+
+    .cta {
+      display: inline-block;
+      background-color: #e02128;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+      width: 100%;
+      box-sizing: border-box;
+      display: block;
+    }
+
+    .cta:hover {
+      background-color: #c21822;
+    }
+
+    .footer-note {
+      font-size: 0.75rem;
+      color: #999;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="logo">
+      <!-- Replace the src with your hosted Target logo -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg" alt="Target Logo">
+    </div>
+
+    <h1>Claim Your $100 Target Gift Card</h1>
+    <p class="subtitle">Join now and collect your rewards!</p>
+
+    <div class="steps">
+      <h2>How to Claim Your Gift Card</h2>
+      <ol>
+        <li>Click the link below 👇</li>
+        <li>Enter your email &amp; basic info ✍️</li>
+        <li>Complete recommended deals ✔️</li>
+        <li>Claim your reward 🎁✨</li>
+      </ol>
+    </div>
+
+    <a href="YOUR_OFFER_BRIDGE_LINK" class="cta">Claim Now</a>
+    <p class="footer-note">*Terms and conditions apply. Limited time offer.</p>
+  </div>
+
+</body>
+</html>
 
