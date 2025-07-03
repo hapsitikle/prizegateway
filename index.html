@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Claim Your $100 Target Gift Card</title>
   <style>
     /* Import a clean, premium font */
@@ -14,24 +14,31 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fff;
-      color: #333;
+      background-color: rgba(224,33,40, 0.03); /* very faint red/pink */
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       padding: 20px;
     }
 
     .card {
+      background-color: #fff;
       border: 2px solid #e02128;
       border-radius: 12px;
       max-width: 360px;
       width: 100%;
       padding: 20px;
       text-align: center;
+      /* glowing border effect */
+      box-shadow:
+        0 0 8px rgba(224,33,40, 0.4),
+        0 0 20px rgba(224,33,40, 0.2);
     }
 
     .logo {
@@ -101,26 +108,24 @@
     }
 
     .cta {
-  display: inline-block;
-  background-color: #e02128;
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 24px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
-  width: 100%;
-  box-sizing: border-box;
-  display: block;
-
-  /* New: */
-  font-size: 1.1rem;
-  line-height: 1.3;
-}
-
+      display: block;
+      background-color: #e02128;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 8px;
+    }
 
     .cta:hover {
       background-color: #c21822;
+      box-shadow: 0 0 10px rgba(224,33,40, 0.5);
     }
 
     .footer-note {
@@ -151,10 +156,11 @@
       </ol>
     </div>
 
-    <a href="https://rewarrdsgiant.com/aff_c?offer_id=323&aff_id=134431" class="cta">Claim Now</a>
+    <a href="https://rewarrdsgiant.com/aff_c?offer_id=323&aff_id=134431" class="cta">
+      Claim Now
+    </a>
     <p class="footer-note">*Terms and conditions apply. Limited time offer.</p>
   </div>
 
 </body>
 </html>
-
