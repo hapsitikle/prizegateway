@@ -1,167 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grab Your $8 Labubu Gift – Fast & Easy!</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claim Your $250 LABUBU Gift Card Today</title>
   <style>
-    /* Reset & base */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f5f5f7;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* 1) Container gradient border via dual-background trick */
+    .card {
+      position: relative;
+      max-width: 380px;
+      width: 100%;
+      border-radius: 20px;
+      padding: 0; /* we'll pad the inner wrapper instead */
+      background:
+        linear-gradient(135deg, #FFD6E8, #E4C1F9, #B5EAEA) border-box, /* gradient in border */
+        #fff padding-box;                                             /* white fill */
+      border: 4px solid transparent; /* needed for the trick */
+    }
+
+    /* inner content wrapper to get padding */
+    .card-inner {
+      border-radius: 16px; /* radius minus border width (20-4) */
+      background-color: #fff;
+      padding-top: 10px;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-bottom: 24px;
+      text-align: center;
+    }
+
+    .logo { margin-bottom: 8px; }
+    .logo img { max-height: 80px; }
+
+    h1 {
+      font-size: 1.75rem;
+      color: #000;
+      margin-bottom: 12px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 16px;
       line-height: 1.4;
     }
-    .wrapper {
-      max-width: 400px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
 
-    /* Header */
-    .header {
-      background: linear-gradient(135deg, #ffa6c1, #8bd3dd);
-      padding: 20px;
-      text-align: center;
-    }
-    .logo {
-      max-width: 180px;
-    }
-
-    /* Main content */
-    .main-content {
-      padding: 24px;
-      text-align: center;
-    }
-    .headline {
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-    }
-    .subheadline {
-      font-size: 1rem;
-      color: #666;
+    /* 2) Steps panel gradient fill */
+    .steps {
+      background: linear-gradient(135deg, #FFD6E8, #E4C1F9, #B5EAEA);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: left;
       margin-bottom: 24px;
     }
-
-    /* Steps */
-    .steps {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 32px;
+    .steps h2 {
+      font-size: 1.125rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #000;
+      line-height: 1.3;
     }
-    .step {
+    .steps ol {
+      list-style: none;
+      counter-reset: step;
+    }
+    .steps li {
+      counter-increment: step;
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 36px;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #000;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 26px;
+      height: 26px;
+      background-color: #000;
+      color: #fff;
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      background: #fafafa;
-      border-radius: 8px;
-      padding: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .step-number {
-      font-weight: bold;
-      font-size: 1.2rem;
-      width: 32px;
-      height: 32px;
-      line-height: 32px;
-      border-radius: 50%;
-      background: #8bd3dd;
-      color: #fff;
-      text-align: center;
-      margin-right: 12px;
-    }
-    .step-text {
+      justify-content: center;
+      font-weight: 600;
       font-size: 0.95rem;
-      text-align: left;
     }
 
-    /* CTA */
-    .cta-button {
-      display: inline-block;
-      width: 100%;
-      padding: 16px;
+    .subnudge {
+      font-style: italic;
+      color: #000;
+      font-size: 0.95rem;
       margin-bottom: 12px;
-      background: linear-gradient(135deg, #ff8a80, #ff80ab);
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: bold;
+    }
+
+    /* 3) CTA button gradient fill */
+    .cta {
+      display: block;
+      background: linear-gradient(135deg, #FFD6E8, #E4C1F9, #B5EAEA);
+      color: #000;
       text-decoration: none;
+      padding: 16px 0;
       border-radius: 8px;
-      transition: transform 0.2s;
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      transition: opacity 0.2s ease;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 16px;
     }
-    .cta-button:hover {
-      transform: scale(1.02);
+    .cta:hover {
+      opacity: 0.8;
     }
 
-    /* Small note */
-    .small-note {
-      font-size: 0.85rem;
-      color: #555;
-      margin-bottom: 24px;
-    }
-
-    /* Footer */
-    .footer {
-      background: #f0f0f0;
-      padding: 12px 16px;
-      text-align: center;
-    }
-    .footer p {
-      font-size: 0.75rem;
-      color: #777;
+    .footer-note {
+      font-size: 0.8rem;
+      color: #D3D3D3;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <img src="https://via.placeholder.com/150x50?text=Labubu+Giveaway" alt="Labubu Giveaway Logo" class="logo">
-    </header>
 
-    <main class="main-content">
-      <h1 class="headline">Claim Your $8 Labubu Gift Card Today!</h1>
-      <p class="subheadline">Complete 3–5 quick deals & get rewarded instantly.</p>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-text">Click the button below 👇</div>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-text">Enter your email & info ✍️</div>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-text">Complete 3–5 deals ✔️</div>
-        </div>
-        <div class="step">
-          <div class="step-number">4</div>
-          <div class="step-text">Receive $8 via email 🎁</div>
-        </div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="logo">
+        <img src="images/labubu.png" alt="Labubu Logo">
       </div>
 
-      <a class="cta-button"
-         href="https://rewarrdsgiant.com/aff_c?offer_id=2701&aff_id=134431"
-         target="_blank"
-         rel="noopener">
-        Claim $8 Now
-      </a>
+      <h1>Claim Your $250 LABUBU Gift Card Today – Don't Miss Out!</h1>
+      <p class="subtitle">Join now and collect your rewards!</p>
 
-      <p class="small-note">Want an even bigger reward? Complete extra deals to boost your earnings!</p>
-    </main>
+      <div class="steps">
+        <h2>Follow These 4 Easy Steps:</h2>
+        <ol>
+          <li>Hit the Claim Button 👇</li>
+          <li>Enter Your Email &amp; Info ✍️</li>
+          <li>Complete as Many Deals as Possible ✔️</li>
+          <li>Grab Your Reward Through Email 🎁✨</li>
+        </ol>
+      </div>
 
-    <footer class="footer">
-      <p>*Terms & conditions apply. Limited time offer. Not affiliated with Shein.</p>
-    </footer>
+      <p class="subnudge">Want an even better shot? Complete extra deals to boost your earnings!</p>
+
+      <a href="https://rewarrdsgiant.com/aff_c?offer_id=2701&aff_id=134431" class="cta">Claim Now</a>
+
+      <p class="footer-note">
+        *Terms and conditions apply. Limited time offer.<br>
+        Not affiliated with LABUBU.
+      </p>
+    </div>
   </div>
+
 </body>
 </html>
+
