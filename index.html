@@ -1,177 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Claim Your $750 SHEIN Gift Card Today</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    /* 1) Container gradient border via dual-background trick */
-    .card {
-      position: relative;
-      max-width: 380px;
-      width: 100%;
-      border-radius: 20px;
-      padding: 0; /* we'll pad the inner wrapper instead */
-      background:
-        linear-gradient(135deg, #FFD6E8, #E4C1F9, #B5EAEA) border-box, /* gradient in border */
-        #fff padding-box;                                             /* white fill */
-      border: 4px solid transparent; /* needed for the trick */
-    }
-
-    /* inner content wrapper to get padding */
-    .card-inner {
-      border-radius: 16px; /* radius minus border width (20-4) */
-      background-color: #fff;
-      padding-top: 10px;
-      padding-left: 24px;
-      padding-right: 24px;
-      padding-bottom: 24px;
-      text-align: center;
-    }
-
-    .logo { margin-bottom: 8px; }
-    .logo img { max-height: 80px; }
-
-    h1 {
-      font-size: 1.75rem;
-      color: #000;
-      margin-bottom: 12px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .subtitle {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 16px;
-      line-height: 1.4;
-    }
-
-    /* 2) Steps panel gradient fill */
-    .steps {
-      background: linear-gradient(135deg, #FFD6E8, #E4C1F9, #B5EAEA);
-      border-radius: 10px;
-      padding: 16px;
-      text-align: left;
-      margin-bottom: 24px;
-    }
-    .steps h2 {
-      font-size: 1.125rem;
-      margin-bottom: 12px;
-      font-weight: 600;
-      color: #000;
-      line-height: 1.3;
-    }
-    .steps ol {
-      list-style: none;
-      counter-reset: step;
-    }
-    .steps li {
-      counter-increment: step;
-      margin-bottom: 12px;
-      position: relative;
-      padding-left: 36px;
-      font-size: 1rem;
-      line-height: 1.4;
-      color: #000;
-    }
-    .steps li::before {
-      content: counter(step);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 26px;
-      height: 26px;
-      background-color: #000;
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .subnudge {
-      font-style: italic;
-      color: #000;
-      font-size: 0.95rem;
-      margin-bottom: 12px;
-    }
-
-    /* 3) CTA button gradient fill */
-    .cta {
-      display: block;
-      background: linear-gradient(135deg, #FFD6E8, #E4C1F9, #B5EAEA);
-      color: #000;
-      text-decoration: none;
-      padding: 16px 0;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1.2rem;
-      line-height: 1.3;
-      transition: opacity 0.2s ease;
-      width: 100%;
-      box-sizing: border-box;
-      margin-bottom: 16px;
-    }
-    .cta:hover {
-      opacity: 0.8;
-    }
-
-    .footer-note {
-      font-size: 0.8rem;
-      color: #D3D3D3;
-      line-height: 1.4;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grab Your \$8 Labubu Gift – Fast & Easy!</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="wrapper">
+    <header class="header">
+      <img src="https://via.placeholder.com/150x50?text=Labubu+Giveaway" alt="Labubu Giveaway Logo" class="logo">
+    </header>
 
-  <div class="card">
-    <div class="card-inner">
-      <div class="logo">
-        <img src="images/shein.png" alt="SHEIN Logo">
-      </div>
-
-      <h1>Claim Your $750 SHEIN Gift Card Today – Don't Miss Out!</h1>
-      <p class="subtitle">Join now and collect your rewards!</p>
+    <main class="main-content">
+      <h1 class="headline">Claim Your \$8 Labubu Gift Card Today!</h1>
+      <p class="subheadline">Complete 3–5 quick deals & get rewarded instantly.</p>
 
       <div class="steps">
-        <h2>Follow These 4 Easy Steps:</h2>
-        <ol>
-          <li>Hit the Claim Button 👇</li>
-          <li>Enter Your Email &amp; Info ✍️</li>
-          <li>Complete as Many Deals as Possible ✔️</li>
-          <li>Grab Your Reward Through Email 🎁✨</li>
-        </ol>
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-text">Click the button below 👇</div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-text">Enter your email & info ✍️</div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-text">Complete 3–5 deals ✔️</div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-text">Receive \$8 via email 🎁</div>
+        </div>
       </div>
 
-      <p class="subnudge">Want an even better shot? Complete extra deals to boost your earnings!</p>
+      <a class="cta-button" href="https://rewarrdsgiant.com/aff_c?offer_id=2701&aff_id=134431" target="_blank" rel="noopener">
+        Claim \$8 Now
+      </a>
 
-      <a href="https://rewarduplevel.com/aff_c?offer_id=78&aff_id=134431" class="cta">Claim Now</a>
+      <p class="small-note">Want an even bigger reward? Complete extra deals to boost your earnings!</p>
+    </main>
 
-      <p class="footer-note">
-        *Terms and conditions apply. Limited time offer.<br>
-        Not affiliated with SHEIN.
-      </p>
-    </div>
+    <footer class="footer">
+      <p>*Terms & conditions apply. Limited time offer. Not affiliated with Shein.</p>
+    </footer>
   </div>
-
 </body>
 </html>
