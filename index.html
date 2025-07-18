@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Get Your $250 Labubu Gift Card</title>
+
+  <!-- Styles -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -52,19 +54,37 @@
     }
     .btn:hover { opacity: 0.9; }
   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0WLWBMW15P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-0WLWBMW15P');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WLWBMW15P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0WLWBMW15P');
+  </script>
+
+  <!-- Custom CTA click tracking -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.querySelector('.btn');
+      if (!btn) return;
+
+      btn.addEventListener('click', function() {
+        var params = new URLSearchParams(window.location.search);
+        var source = params.get('utm_source') || 'unknown';
+        gtag('event', 'click_offer', {
+          'event_category': 'CTA',
+          'event_label': source
+        });
+      });
+    });
+  </script>
 </head>
+
 <body>
   <div class="container">
-    <!-- Replace with your actual Labubu gift card graphic -->
+    <!-- Your actual Labubu gift card graphic -->
     <img
       src="images/logo.png"
       alt="$250 Labubu Gift Card"
@@ -72,7 +92,9 @@
     >
 
     <div class="copy">
-      <strong>Hi girlies! If you are after $250 to spend on Labubu, simply complete 3‑5 deals and you'll get the gift card ✨</strong>
+      <strong>
+        Hi girlies! If you are after $250 to spend on Labubu, simply complete 3‑5 deals and you'll get the gift card ✨
+      </strong>
       Click the button below to receive $250 to spend on Labubu
     </div>
 
