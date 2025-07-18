@@ -6,40 +6,46 @@
   <title>Get Your $250 Labubu Gift Card</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
     body {
       font-family: 'Inter', sans-serif;
       background: linear-gradient(180deg, #FFC1E3 0%, #8BD3DD 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       color: #111;
       padding: 20px;
+      text-align: center;
     }
     .container {
-      max-width: 360px;
       width: 100%;
+      max-width: 360px;
+    }
+    .profile {
+      margin-bottom: 16px;
+    }
+    .profile img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 8px;
+    }
+    .profile-name {
+      font-size: 1rem;
+      font-weight: 600;
     }
     .gift-img {
       width: 100%;
       border-radius: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-    p {
+    .copy {
       font-size: 1rem;
-      margin-bottom: 24px;
       line-height: 1.4;
+      margin-bottom: 28px;
     }
     .btn {
       display: block;
@@ -53,25 +59,35 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: opacity 0.2s;
     }
-    .btn:hover {
-      opacity: 0.9;
-    }
+    .btn:hover { opacity: 0.9; }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- You can swap this with a real Labubu gift‑card image -->
-    <img src="https://via.placeholder.com/360x200?text=$250+Labubu+Gift+Card" 
-         alt="$250 Labubu Gift Card" 
-         class="gift-img">
+    <div class="profile">
+      <!-- Replace src and alt with your own photo -->
+      <img src="https://via.placeholder.com/72" alt="Your Profile">
+      <div class="profile-name">Kaylen✨</div>
+    </div>
 
-    <h1>Want a $250 Labubu Gift Card?</h1>
-    <p>Just complete 3–5 quick deals and it’s yours—no credit card needed!</p>
+    <!-- Replace with your actual Labubu gift card graphic -->
+    <img
+      src="https://via.placeholder.com/360x200?text=$250+Labubu+Gift+Card"
+      alt="$250 Labubu Gift Card"
+      class="gift-img"
+    >
 
-    <a href="https://rewarrdsgiant.com/aff_c?offer_id=2701&aff_id=134431" 
-       class="btn" 
-       target="_blank" 
-       rel="noopener">
+    <div class="copy">
+      Hi girlies! If you are after $250 to spend on Labubu, simply complete 3‑5 deals and you'll get the gift card ✨<br>
+      Click the button below to receive $250 to spend on Labubu
+    </div>
+
+    <a
+      href="https://rewarrdsgiant.com/aff_c?offer_id=2701&aff_id=134431"
+      class="btn"
+      target="_blank"
+      rel="noopener"
+    >
       ❤️ START HERE 👋
     </a>
   </div>
