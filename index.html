@@ -3,63 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Current Promotions & Rewards</title>
+  <title>Promotions & Rewards Guide</title>
   <style>
-    :root { --bg:#f8fafc; --text:#0f172a; --muted:#475569; --card:#ffffff; --brand:#2563eb; --brand2:#1d4ed8; }
-    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--text);}
-    .wrap{max-width:980px;margin:auto;padding:32px 20px}
-    .hero{background:linear-gradient(180deg,#ffffff, #f1f5f9);border:1px solid #e2e8f0;border-radius:16px;padding:36px}
-    h1{font-size:clamp(24px,4vw,34px);margin:0 0 12px}
-    p{color:var(--muted);line-height:1.6;margin:0 0 16px}
-    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:26px 0}
-    .card{background:var(--card);border:1px solid #e2e8f0;border-radius:12px;padding:18px}
-    .n{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:#e2e8f0;font-weight:700;margin-bottom:10px}
-    .cta{display:inline-block;margin-top:8px;padding:12px 18px;background:var(--brand);color:#fff;text-decoration:none;border-radius:10px;font-weight:600}
-    .cta:focus,.cta:hover{background:var(--brand2)}
-    .note{font-size:14px;color:#64748b;margin-top:12px}
-    footer{margin-top:28px;font-size:13px;color:#64748b}
-    .disclaimer{border-top:1px solid #e2e8f0;margin-top:22px;padding-top:16px}
+    :root{
+      --bg1:#fff7fb; --bg2:#f0f9ff;
+      --card:#ffffff; --ink:#0f172a; --muted:#475569;
+      --brand:#ff7ab6; --brand2:#fb7185; --brand3:#7c3aed;
+      --ring:#dbeafe; --line:#e2e8f0;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background: radial-gradient(1200px 800px at 10% -10%, var(--bg1), transparent),
+                  radial-gradient(1200px 800px at 110% 10%, var(--bg2), transparent),
+                  #fff;
+    }
+    .wrap{max-width:980px;margin:auto;padding:28px 18px}
+    .hero{
+      background:linear-gradient(180deg,#fff, #fafcff);
+      border:1px solid var(--line); border-radius:20px; padding:28px;
+      box-shadow:0 10px 25px rgba(124,58,237,.08);
+    }
+    .title{
+      font-size:clamp(26px,4.5vw,36px); margin:0 0 8px; letter-spacing:.2px;
+      background:linear-gradient(90deg,#111,#5b21b6 60%,#111);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    p.lead{color:var(--muted);margin:0 0 18px;line-height:1.6}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:22px 0}
+    .card{
+      background:var(--card); border:1px solid var(--ring); border-radius:16px; padding:18px;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .card:hover{transform:translateY(-2px); box-shadow:0 8px 18px rgba(2,8,23,.06)}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      background:linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#fff; padding:6px 12px; border-radius:999px; font-size:.9rem; font-weight:700
+    }
+    .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#eef2ff;color:#4c1d95;font-weight:800}
+    h3{margin:10px 0 6px;font-size:1.05rem}
+    p{margin:0 0 12px;color:var(--muted)}
+    .cta{
+      display:inline-flex;align-items:center;gap:10px;
+      margin-top:6px;padding:14px 20px;border-radius:14px;
+      background:linear-gradient(90deg,var(--brand3), var(--brand));
+      color:#fff;text-decoration:none;font-weight:700;
+      box-shadow:0 10px 20px rgba(124,58,237,.18);
+      transition:transform .12s ease, filter .12s ease
+    }
+    .cta:hover{transform:translateY(-1px); filter:saturate(1.05)}
+    .hint{font-size:.9rem;color:#64748b;margin-top:10px}
+    .disclaimer{
+      border-top:1px dashed var(--line); margin-top:18px; padding-top:14px; color:#64748b; font-size:.9rem
+    }
+    footer{margin-top:26px;color:#94a3b8;font-size:.85rem;text-align:center}
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="hero" aria-labelledby="title">
-      <h1 id="title">Explore Current Promotions & Rewards</h1>
-      <p>
-        We surface third-party promotions where eligible participants may receive rewards
-        (for example, retail gift cards such as Lululemon) after completing partner tasks.
-        Please review all terms on the partner’s page before participating.
+      <span class="badge">✨ Friendly Guide</span>
+      <h1 id="title" class="title">Explore Promotions & Rewards</h1>
+      <p class="lead">
+        We highlight third-party promotions where eligible participants may receive rewards
+        (for example, retail gift cards like Lululemon) after completing partner tasks.
+        Please review terms on the partner’s page before joining.
       </p>
 
       <div class="steps" aria-label="How it works">
         <div class="card">
-          <div class="n" aria-hidden="true">1</div>
-          <h3 style="margin:6px 0 6px;">Visit Partner Page</h3>
-          <p>Follow the link below to view the current promotion and requirements.</p>
+          <div class="num" aria-hidden="true">1</div>
+          <h3>Visit Partner Page 🧭</h3>
+          <p>Tap below to see the current promotion, details, and requirements.</p>
         </div>
         <div class="card">
-          <div class="n" aria-hidden="true">2</div>
-          <h3 style="margin:6px 0 6px;">Complete Available Tasks</h3>
+          <div class="num" aria-hidden="true">2</div>
+          <h3>Complete Available Tasks ✅</h3>
           <p>Tasks and eligibility criteria are listed by the partner. Participation is optional.</p>
         </div>
         <div class="card">
-          <div class="n" aria-hidden="true">3</div>
-          <h3 style="margin:6px 0 6px;">Check Reward Eligibility</h3>
+          <div class="num" aria-hidden="true">3</div>
+          <h3>Check Reward Eligibility 🎁</h3>
           <p>Rewards are subject to the partner’s terms, availability, and verification.</p>
         </div>
       </div>
 
-      <a class="cta" href="https://rewarrdsgiant.com/aff_c?offer_id=389&aff_id=134431" target="_blank" rel="noopener">See Offer Details</a>
-      <p class="note">By continuing, you will leave this site and visit a third-party page.</p>
+      <a class="cta" href="https://rewarrdsgiant.com/aff_c?offer_id=389&aff_id=134431" target="_blank" rel="noopener">
+        See Offer Details <span aria-hidden="true">→</span>
+      </a>
+      <div class="hint">You’ll leave this site and visit a third-party page.</div>
 
       <div class="disclaimer">
-        <p><strong>Disclaimer:</strong> This is an independent informational page. We are not affiliated with or endorsed by Lululemon or any other brand mentioned by our partners. No sensitive personal information is collected on this site. Rewards, if any, are provided by the partner and may require meeting eligibility criteria and completing required steps. Always read the partner’s terms and privacy policy.</p>
+        <strong>Disclaimer:</strong> This independent page provides general information about third-party promotions.
+        We are not affiliated with or endorsed by Lululemon or any brand mentioned by partners. This site does not collect
+        sensitive personal information. Any potential rewards are provided by the partner and may require meeting eligibility
+        criteria and completing steps. Always read the partner’s terms and privacy policy.
       </div>
     </section>
 
-    <footer>
-      © 2025. All rights reserved.
-    </footer>
+    <footer>© 2025. All rights reserved.</footer>
   </main>
 </body>
 </html>
